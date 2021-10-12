@@ -1,8 +1,6 @@
 package exercise41.base;
 
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
