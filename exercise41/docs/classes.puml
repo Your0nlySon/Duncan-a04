@@ -1,0 +1,11 @@
+@startuml
+class Solution41 {
+
+-int arrSize
+
++getNames()
++getSize()
++sortNames()
+-printNamesToOutput()
+}
+@enduml
