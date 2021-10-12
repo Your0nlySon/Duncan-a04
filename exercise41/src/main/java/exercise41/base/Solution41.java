@@ -5,47 +5,59 @@ package exercise41.base;
  *  Copyright 2021 first_name last_name
  */
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Solution41 {
 
-    private int arrSize;
 
     public static void main(String[] args) {
         Solution41 sol = new Solution41();
 
-        //have to throw an exception for the scanner
-        Scanner s = null;
+        String outName = "data\\exercise41_output.txt";
+        String fileName = "data\\exercise41_input.txt";
+        //call a method called getNames with a parameter of S
+        List<String> getNames = sol.getNames(fileName);
+        //call a method called sortNames
+        List<String> sortNames = sol.sortNames(getNames);
+        //call method 'printNamesToOutput'
+        sol.printNamesToOutput(sortNames, outName);
+    }
+
+    public List<String> getNames(String fI) {
+
+        //try and catch with bufferedReader
+        List<String> names = Collections.emptyList();
         try {
-            s = new Scanner(new File("data\\exercise41_input.txt"));
+            names = Files.readAllLines(Paths.get(fI), StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return names;
+    }
+
+
+    public List<String> sortNames(List<String> nameArr) {
+        //use collections to sort the array using stream
+        List<String> sortedList = nameArr.stream().sorted().collect(Collectors.toList());
+        return sortedList;
+    }
+
+    public void printNamesToOutput(List<String> sortNames, String oN) {
+        //create a try and catch that will print onto the output file
+        try {
+            PrintStream fileOut = new PrintStream(oN);
+            System.setOut(fileOut);
+            System.out.print("Total of 7 names\n-----------------\n");
+            sortNames.forEach(System.out::println);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        ArrayList getNames = sol.getNames(s);
-        sol.getSize(getNames);
-        ArrayList sortNames = sol.sortNames(getNames);
-        sol.printNamesToOutput(sortNames);
-    }
-
-    public ArrayList getNames(Scanner fI) {
-        //create while loop that will fill up nameArr
-        return null;
-    }
-
-    private void getSize(ArrayList gN) {
-        //arrSize = gN.size()
-    }
-
-    public ArrayList sortNames(ArrayList<String> nameArr) {
-        //use collections to sort the array in reverse order
-        return null;
-    }
-
-    private void printNamesToOutput(ArrayList sortNames) {
-        //Create a for loop that contains arrSize and nameArr
+        return;
     }
 }
