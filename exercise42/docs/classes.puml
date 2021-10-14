@@ -1,0 +1,34 @@
+@startuml
+
+class Solution41 {
+
+    -List<List<String>> employee = new ArrayList<>();
+    -employeeReader eR;
+    -employeeOutput eO;
+    -fileName = "data\\exercise42_input.txt"
+    -Scanner read;
+    main(String[])
+    +readEmployee(String fileName)
+    'eR.rEmployee(fileName);
+    +outputEmployee()
+    'eO.oEmployee(fileName);
+}
+
+class employeeReader {
+    +rEmployee(String fileName)
+    'reads values from a csv list
+    'uses scanner to read the lines
+    'then split the values by , using string split
+    'add values to the ArrayList employee;
+}
+
+class employeeOutput {
+    +oEmployee(String fileName)
+    'Create a println that creates the header of the table
+    'System.out.println(emp
+}
+
+Solution41 --o employeeReader
+Solution41 --o employeeOutput
+
+@enduml
