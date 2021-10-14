@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class employeeReader {
 
-    public void rEmployee(File file, Scanner read, List<List<String>> employee) {
+    public List<List<String>> rEmployee(File file, List<List<String>> employee) {
         //try
         //catch
             //stackTrace
         try {
             //call read and then scan the file
-            read = new Scanner(file);
+            Scanner read = new Scanner(file);
 
             while (read.hasNext()) {
                 //read line from file and add it to a string array but split it by ,
@@ -29,5 +29,6 @@ public class employeeReader {
             //stackTrace
             e.printStackTrace();
         }
+        return employee;
     }
 }

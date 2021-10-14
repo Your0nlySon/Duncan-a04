@@ -12,7 +12,6 @@ public class Solution42 {
     employeeOutput eO = new employeeOutput();
     private String fileName = "data\\exercise42_input.txt";
     File file = new File(fileName);
-    private Scanner read;
 
     public static void main(String[] args) {
         Solution42 sol = new Solution42();
@@ -22,7 +21,7 @@ public class Solution42 {
     }
 
     private void readEmployee() {
-        eR.rEmployee(file, read, employee);
+        eR.rEmployee(file, employee);
     }
 
     private void outputEmployee() {
