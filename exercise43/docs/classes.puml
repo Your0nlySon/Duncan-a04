@@ -1,0 +1,43 @@
+@startuml
+
+class Solution43 {
+    -String webName;
+    -String authorName;
+    -String javaScript;
+    -String css;
+    -readUserInput rUI;
+    -createFiles cF;
+
+    main(String[])
+    +readUI()
+    'rUI.rWebName(webName);
+    'rUI.rAuthorName(authorName);
+    'rUI.rJavaScript(javaScript);
+    'rUI.rCSS(css);
+    +createF()
+    'cF.createWebsite(webName, authorName);
+    'cF.createJS(webName, javaScript);
+    'cF.createCSS(webName, css);
+}
+
+class readUserInput {
+    +rWebName(String webName)
+    'reads user input and stores in webName
+    +rAuthorName(String authorName)
+    'reads user input and stores in authorName
+    +rJavaScript(String javaScript)
+    'reads user input and stores in javaScript
+    +rCSS(String css)
+    'reads user input and stores in css
+}
+
+class createFiles {
+    +createWebsite(String webName, String authorName)
+    +createJS(String webName, String javaScript)
+    +createCSS(String webName, String css)
+}
+
+Solution43 --o readUserInput
+Solution43 --o createFiles
+
+@enduml
