@@ -30,7 +30,8 @@ public class Solution43 {
 
     private void createF() {
         //calls the createF class functions
-        cF.createWebsite(webName, authorName);
+        cF.createWebsite(webName);
+        cF.createIndex(webName, authorName);
         cF.createJS(webName, javaScript);
         cF.createCSS(webName, css);
     }

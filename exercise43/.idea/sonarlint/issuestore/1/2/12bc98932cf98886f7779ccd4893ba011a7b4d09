@@ -1,0 +1,26 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Øúëúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ğõßîşÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ü¢áıÿÿÿÿ
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(á‡æê
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(¯Ä·çúÿÿÿÿ
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(Ç“Š«ıÿÿÿÿ
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(²ÅÃÈøÿÿÿÿ
+N	java:S106O"9Replace this use of System.out or System.err by a logger.(­Â•
+S	java:S106Q"9Replace this use of System.out or System.err by a logger.(Ùû—¡üÿÿÿÿ
+N	java:S106X"9Replace this use of System.out or System.err by a logger.(İòàå
+|
+java:S1192"aDefine a constant instead of duplicating this literal "File already exist at location: " 4 times.(ğõßîşÿÿÿÿ
+d
+java:S1192"IDefine a constant instead of duplicating this literal "Created " 4 times.(Øúëúÿÿÿÿ
+i
+java:S1192
+"NDefine a constant instead of duplicating this literal "data/website/" 4 times.(Ú°êÿüÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(æûœ•ıÿÿÿÿ
+E
+java:S54119"*Use the primitive boolean expression here.(ûŞÈşÿÿÿÿ
+E
+java:S5411N"*Use the primitive boolean expression here.(ûŞÈşÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•Õİÿÿÿÿÿ
+b
+java:S2095("LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ÃÓ›ì
