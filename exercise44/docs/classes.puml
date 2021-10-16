@@ -1,0 +1,24 @@
+@startuml
+
+class Solution44 {
+    -JSONObject jsonObject;
+    -Object obj;
+    main(String[])
+    +readJSON()
+    'rJ.parseJson()
+    +uInputRead()
+    'uR.readInput(readJSON())
+
+}
+
+class jsonReader {
+    +JSONArray parseJSON(JSONObject jsonObject, Object obj)
+}
+
+class readUserInput {
+    +readInput(JSONArray subjects)
+}
+
+Solution44 --o jsonReader
+Solution44 --o readUserInput
+@enduml
