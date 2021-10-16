@@ -1,0 +1,34 @@
+@startuml
+
+class Solution45 {
+    -readFile rF;
+    -replaceWord rW;
+    -writeFile wF;
+    -String fileName = "data/exercise44_input.txt"
+
+    main(String[])
+    +fileRead()
+    'rF.fileRead(fileName)
+    +wordReplace()
+    'rW.wordReplace(fileRead)
+    +fileWrite()
+    'wF.fileWrite(wordReplace)
+}
+
+class readFile {
+    +String fileReader(String fileName)
+}
+
+class replaceWord {
+    +String wordReplacer(String fileString)
+}
+
+class writeToFile {
+    +fileWriter(String stringToFile)
+}
+
+Solution45 --o readFile
+Solution45 --o replaceWord
+Solution45 --o writeToFile
+
+@enduml
