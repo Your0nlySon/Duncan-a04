@@ -46,7 +46,7 @@ public class createFiles {
         return inFile;
     }
 
-    public void createJS(List<String> webName, List<String> javaScript) {
+    public File createJS(List<String> webName, List<String> javaScript) {
         //if else function that creates a js file
         if ("y".matches(javaScript.get(0)) || "Y".matches(javaScript.get(0))) {
             String jsFile = "data/website/" + webName.get(0) + "/js/";
@@ -62,12 +62,14 @@ public class createFiles {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            return javaSFile;
         }
         else {
             System.out.println("Javascript file was not created");
         }
+        return null;
     }
-        public void createCSS (List < String > webName, List < String > css){
+        public File createCSS (List < String > webName, List < String > css){
             //if else function that creates a css file
             if ("y".matches(css.get(0)) || "Y".matches(css.get(0))) {
                 String cssFile = "data/website/" + webName.get(0) + "/css/";
@@ -83,9 +85,11 @@ public class createFiles {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                return cSSFile;
             }
             else {
                 System.out.println("CSS file was not created");
             }
+            return null;
     }
 }
