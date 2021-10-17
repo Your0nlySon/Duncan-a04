@@ -1,0 +1,3 @@
+dog dog cat
+dog lizard dog cat cat
+lizard zebra
