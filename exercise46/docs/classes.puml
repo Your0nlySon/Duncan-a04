@@ -1,0 +1,24 @@
+@startuml
+
+class Solution46 {
+
+    -readFile rF;
+    -printFrequency pF;
+    -String fileName = "data/exercise46_input.txt"
+
+    main(String[])
+    +fileRead()
+    'rF.fileRead(fileName)
+    +frequencyPrint()
+    'pF.fPrint(fileRead)
+}
+
+class readFile {
+    +String fileReader(String fileName)
+}
+
+class printFrequency {
+    +fPrinter(String wordString)
+}
+
+@enduml
