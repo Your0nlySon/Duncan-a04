@@ -2,7 +2,7 @@ package exercise46.base;
 
 public class Solution46 {
 
-    readFile rF = new readFile;
+    readFile rF = new readFile();
     printFrequency pF = new printFrequency();
     String fileName = "data/exercise46_input.txt";
 
