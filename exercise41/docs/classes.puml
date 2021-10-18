@@ -1,6 +1,9 @@
 @startuml
 class Solution41 {
 
+'The reason that I made everything into one class is that it was small enough methods to keep it in one class.
+'Also I would have had to pass a lot of parameters in the other classes in order to make them run.
+
 +getNames()
 +sortNames()
 -printNamesToOutput()
