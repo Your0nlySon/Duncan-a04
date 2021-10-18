@@ -5,6 +5,7 @@ public class Solution45 {
     readFile rF = new readFile();
     replaceWord rW = new replaceWord();
     writeToFile wF = new writeToFile();
+    askFileName aF = new askFileName();
     String fileName = "data/exercise44_input.txt";
 
     public static void main(String[] args) {
@@ -12,7 +13,12 @@ public class Solution45 {
 
         sol.fileRead();
         sol.wordReplace();
+        sol.askFileName();
         sol.fileWrite();
+    }
+
+    private String askFileName() {
+        return aF.askFN();
     }
 
     private String fileRead() {
@@ -24,6 +30,6 @@ public class Solution45 {
     }
 
     private void fileWrite() {
-        wF.fileWrite(wordReplace());
+        wF.fileWrite(wordReplace(), askFileName());
     }
 }

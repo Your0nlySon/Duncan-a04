@@ -8,12 +8,9 @@ import java.util.Scanner;
 
 public class writeToFile {
 
-    private static final Scanner in = new Scanner(System.in);
 
-    public void fileWrite(String wordReplace) {
-        //ask user for the name of the file
-        System.out.println("What do you want to name your output file? ");
-        String fileName = in.nextLine();
+    public File fileWrite(String wordReplace, String fileName) {
+
         //create the file
         File myObj = new File("data/" + fileName +".txt");
         Path filePath = Path.of(String.valueOf(myObj));
@@ -23,5 +20,6 @@ public class writeToFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return myObj;
     }
 }
