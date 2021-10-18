@@ -11,6 +11,8 @@ class Solution45 {
     'rF.fileRead(fileName)
     +wordReplace()
     'rW.wordReplace(fileRead)
+    +askFilename()
+    'fN.askFN()
     +fileWrite()
     'wF.fileWrite(wordReplace)
 }
@@ -23,12 +25,17 @@ class replaceWord {
     +String wordReplacer(String fileString)
 }
 
+class askFilename {
+    +String askFn
+}
+
 class writeToFile {
-    +fileWriter(String stringToFile)
+    +fileWriter(String stringToFile, String askFilename)
 }
 
 Solution45 --o readFile
 Solution45 --o replaceWord
+Solution45 --o askFilename
 Solution45 --o writeToFile
 
 @enduml
